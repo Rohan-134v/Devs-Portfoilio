@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #050505;
+  color: #ffffff;
+  overflow-x: hidden; /* Prevents scrollbar issues with animations */
+}
+
+html {
+  scroll-behavior: smooth;
+}
