@@ -1,6 +1,6 @@
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
-import { Code2, Globe, Cpu, Wrench, Database, Terminal } from "lucide-react";
-import { MouseEvent } from "react";
+import { Globe, Cpu, Wrench, Terminal } from "lucide-react";
+import type { MouseEvent } from "react";
 
 // === DATA ===
 const skillCategories = [

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MapPin, Calendar, Layout } from "lucide-react";
+import { MapPin, Calendar } from "lucide-react";
 import Spline from '@splinetool/react-spline';
 // Add this style tag to define the slow spin animation needed for the border
 const customAnimation = `

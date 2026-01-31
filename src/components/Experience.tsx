@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { Briefcase, Calendar, Code, User, Zap } from "lucide-react";
+import {Calendar, Code, User} from "lucide-react";
 
 const experiences = [
   {
