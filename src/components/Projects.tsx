@@ -1,8 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { Github, ExternalLink, Layers, Terminal, CheckCircle2, Loader2 } from "lucide-react";
-import Spline from '@splinetool/react-spline'; 
-
+import SplineAvatar from "./SplineAvatar";
 // === DATA ===
 const projects = [
   {
@@ -82,9 +81,9 @@ export default function Projects() {
                    
                    {/* SPLINE COMPONENT */}
                    <div className="w-full h-full relative z-10 scale-125"> 
-                      <Spline 
-                        scene="https://prod.spline.design/lWoIz1yzzDcCCW0f/scene.splinecode"
-                        className="w-full h-full"
+                      <SplineAvatar 
+                      sceneUrl="https://prod.spline.design/lWoIz1yzzDcCCW0f/scene.splinecode"
+                      className="w-full h-full"
                       />
                    </div>
 

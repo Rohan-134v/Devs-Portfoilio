@@ -1,8 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Mail, Github, Linkedin, Terminal, CheckCircle2, ChevronRight, Instagram, Loader2, RefreshCcw } from "lucide-react";
-import Spline from '@splinetool/react-spline';
-
+import SplineAvatar from "./SplineAvatar";
 export default function Contact() {
   return (
     <section id="contact" className="min-h-screen bg-black text-white py-24 px-6 relative overflow-hidden flex flex-col justify-center">
@@ -26,10 +25,10 @@ export default function Contact() {
              <div className="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2 border-green-500/50 rounded-tl-lg"></div>
              <div className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2 border-green-500/50 rounded-br-lg"></div>
              
-             <div className="w-full h-full relative z-10 scale-110">
-                {/* 3D Model */}
-                <Spline scene="https://prod.spline.design/gXWdQgcEOx8fIihY/scene.splinecode" className="w-full h-full" />
-             </div>
+            <div className="w-full h-full relative z-10 scale-110">
+              {/* Optimized 3D Model (Mobile Touch Fix + Lazy Load) */}
+              <SplineAvatar sceneUrl="https://prod.spline.design/gXWdQgcEOx8fIihY/scene.splinecode" />
+            </div>
              
              <div className="absolute bottom-6 left-6 px-3 py-1.5 rounded-full bg-black/80 border border-green-500/30 backdrop-blur-md flex items-center gap-2 shadow-lg">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
@@ -82,7 +81,7 @@ export default function Contact() {
             <SocialIcon href="https://instagram.com/yourhandle" icon={<Instagram size={20} />} label="Instagram" />
          </div>
          
-         <p className="text-xs text-gray-600 mt-4">© 2027 Rohan Jogi. System Status: Nominal.</p>
+         <p className="text-xs text-gray-600 mt-4">© 2027 Rohan. System Status: Nominal.</p>
       </motion.div>
 
     </section>
@@ -240,7 +239,6 @@ function ContactTerminal() {
              <span className="opacity-50 select-none">$</span>
              <input
                id="terminal-input"
-               autoFocus
                autoComplete="off"
                type={step === 1 ? "email" : "text"}
                value={input}

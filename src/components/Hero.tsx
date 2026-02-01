@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Download } from "lucide-react";
-import Spline from '@splinetool/react-spline';
-
+import SplineAvatar from "./SplineAvatar";
 export default function Hero() {
   return (
     <section className="relative h-screen w-full overflow-hidden bg-black">
@@ -10,12 +9,12 @@ export default function Hero() {
       
       {/* 1. The 3D Scene (Covers entire page) */}
       <div className="absolute inset-0 z-0 ">
-        <Spline 
-          // Replace with your URL
-          scene="https://prod.spline.design/rpGzP-4bk7VBqqaG/scene.splinecode"
+        <SplineAvatar 
+          sceneUrl="https://prod.spline.design/rpGzP-4bk7VBqqaG/scene.splinecode"
           className="w-full h-full object-cover"
         />
         </div>
+
 
         <motion.div 
         initial={{ opacity: 0, y: -20 }}

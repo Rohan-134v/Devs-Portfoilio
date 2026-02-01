@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { MapPin, Calendar } from "lucide-react";
-import Spline from '@splinetool/react-spline';
+import SplineAvatar from "./SplineAvatar";
 // Add this style tag to define the slow spin animation needed for the border
 const customAnimation = `
   @keyframes spin-slow {
@@ -53,18 +53,17 @@ export default function About() {
           {/* Bio Paragraphs */}
           <div className="space-y-6 text-gray-300 leading-relaxed text-lg">
             <p>
-              I’m <strong className="text-white">Rohan Jogi</strong>, a Computer Science undergraduate at <strong className="text-white">PES University</strong>. 
-              My passion lies at the intersection of the digital and physical worlds. I don't just build software; I build bridges—connecting raw hardware logic with intuitive user experiences.
+              I’m <strong className="text-white">Rohan</strong>, a Computer Science undergraduate at <strong className="text-white">PES University</strong>. 
+              I am a software engineer driven by curiosity and code. Whether it's optimizing backend algorithms or crafting intuitive user interfaces, I love solving complex problems and building software that makes a difference.
             </p>
             <p>
-              Whether developing real-time streaming platforms or crafting responsive UI components for ventures like InstiBuzz, I focus on creating scalable, impactful solutions.
-            </p>
+              Always eager to learn and adapt, I am looking to leverage my skills to contribute to a forward-thinking engineering team.            </p>
           </div>
           
           {/* CTA */}
           <div className="pt-4 mt-auto">
              <p className="text-gray-400 italic border-l-2 border-green-500 pl-4">
-               "Eager to bring a fresh perspective to Full-Stack or Embedded Systems roles."
+               "Eager to bring a fresh perspective to Software Development."
              </p>
           </div>
         </motion.div>
@@ -91,10 +90,7 @@ export default function About() {
           <div className="absolute inset-[2px] rounded-[38px] bg-black/90 backdrop-blur-md overflow-hidden z-10 border border-white/10">
             
             {/* THE SPLINE SCENE */}
-            <Spline 
-              scene="https://prod.spline.design/KvPhSrgRMPli4o0g/scene.splinecode"
-              className="w-10 h-10 object-cover"
-            />
+            <SplineAvatar sceneUrl="https://prod.spline.design/KvPhSrgRMPli4o0g/scene.splinecode" />
             
             {/* Optional: Overlay Gradient (If you want the bottom to fade into black) */}
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent pointer-events-none"></div>
