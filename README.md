@@ -1,73 +1,51 @@
-# React + TypeScript + Vite
+# [cite_start]Rohan's Developer Portfolio [cite: 1]
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the source code for my personal developer portfolio! [cite_start]I am Rohan, a Bachelor of Technology student in Computer Science & Engineering at PES University[cite: 1, 5, 6]. This repository contains the code for my personal website, showcasing my professional experience, technical skills, and featured projects.
 
-Currently, two official plugins are available:
+## Tech Stack & Tools
+This project leverages a modern frontend stack to deliver a fast, responsive, and interactive experience:
+* **Build Tool:** Vite (for rapid development and optimized production builds)
+* **Framework:** React
+* **Language:** TypeScript
+* **Styling:** Tailwind CSS & PostCSS
+* **3D Graphics & Animations:** Spline
+* **Code Quality:** ESLint
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Repository Structure
+A quick overview of the project's architecture:
 
-## React Compiler
+├── public/               # Public static assets (e.g., logos, favicons)
+├── src/                  # Main application source code and components
+├── .gitignore            # Files and directories ignored by Git
+├── eslint.config.js      # Configuration for code linting
+├── index.html            # Main HTML entry point
+├── package.json          # Project metadata, scripts, and dependencies
+├── postcss.config.js     # PostCSS configuration (used with Tailwind)
+├── tailwind.config.js    # Tailwind CSS configuration and theme extensions
+├── tsconfig.*.json       # TypeScript configurations (app, node base)
+└── vite.config.ts        # Vite bundler configuration
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## About Me
+I am passionate about software engineering and building efficient, scalable systems. My academic coursework includes Data Structures & Algorithms, Operating Systems, Computer Networks, and Machine Learning[cite: 10].
 
-## Expanding the ESLint configuration
+### Experience
+* **Vice Chair & Secretary | [cite_start]IEEE PESU Student Branch** [cite: 12, 13]
+  * Led the technical direction of the student branch, designing an advanced curriculum for workshops[cite: 15].
+  * [cite_start]Designed and implemented custom cybersecurity challenges for a yearly CTF hackathon with over 200 participants[cite: 16].
+* **UI/UX Web Developer Intern | [cite_start]InstiBuzz** [cite: 18, 19]
+  * Engineered responsive UI components using Figma and HTML/CSS, significantly improving mobile accessibility[cite: 21].
+  * [cite_start]Optimized backend Python scripts to enhance data processing efficiency[cite: 22].
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Featured Projects
+* [cite_start]**Intelligent Traffic Control & Green Corridor System:** Developing a vehicle detection system using YOLO and OpenCV to identify emergency vehicles and dynamically adjust signal timers[cite: 25, 27, 28].
+* **Real-Time Streaming Platform:** Architected a live streaming application using the MERN stack and WebSockets to achieve sub-100ms latency[cite: 30, 32].
+* [cite_start]**Sign Language Vocalizer:** Developed a prototype bi-directional communication device using C++, Python, and Arduino to convert finger gestures into speech[cite: 35, 37].
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Technical Skills
+* [cite_start]**Languages:** Python, C, C++, JavaScript (ES6+), SQL [cite: 41]
+* **Web Technologies:** React.js, Node.js, Express.js, MongoDB, HTML5, CSS3, REST API's [cite: 42]
+* [cite_start]**Tools & Platforms:** Git, GitHub, Docker, Figma, Arduino IDE, MATLAB, Postman [cite: 43]
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Contact
+* [cite_start]**Location:** Bengaluru, India [cite: 2]
+* **Email:** rohanjjogi@gmail.com [cite: 3]
