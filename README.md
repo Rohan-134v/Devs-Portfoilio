@@ -1,51 +1,101 @@
-# [cite_start]Rohan's Developer Portfolio [cite: 1]
+# Rohan's Developer Portfolio
 
-Welcome to the source code for my personal developer portfolio! [cite_start]I am Rohan, a Bachelor of Technology student in Computer Science & Engineering at PES University[cite: 1, 5, 6]. This repository contains the code for my personal website, showcasing my professional experience, technical skills, and featured projects.
+Personal portfolio website built with React and TypeScript, showcasing my experience, projects, and skills.
 
-## Tech Stack & Tools
-This project leverages a modern frontend stack to deliver a fast, responsive, and interactive experience:
-* **Build Tool:** Vite (for rapid development and optimized production builds)
-* **Framework:** React
-* **Language:** TypeScript
-* **Styling:** Tailwind CSS & PostCSS
-* **3D Graphics & Animations:** Spline
-* **Code Quality:** ESLint
+Live site: [devs-portfoilio.vercel.app](https://devs-portfoilio.vercel.app)
+
+---
+
+## Tech Stack
+
+| Category | Technology |
+|---|---|
+| Build Tool | Vite 7 |
+| Framework | React 19 |
+| Language | TypeScript 5.9 |
+| Styling | Tailwind CSS 3, PostCSS |
+| 3D and Animations | Spline, Framer Motion, React Three Fiber |
+| Routing | React Router DOM 7 |
+| Icons | Lucide React |
+| Code Quality | ESLint |
+
+---
+
+## Getting Started
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/Rohan-134v/Devs-Portfoilio.git
+cd Devs-Portfoilio
+npm install
+```
+
+Available scripts:
+
+```bash
+npm run dev       # Start local development server
+npm run build     # Type-check and build for production
+npm run preview   # Preview the production build
+npm run lint      # Run ESLint
+```
+
+---
 
 ## Repository Structure
-A quick overview of the project's architecture:
 
-├── public/               # Public static assets (e.g., logos, favicons)
-├── src/                  # Main application source code and components
-├── .gitignore            # Files and directories ignored by Git
-├── eslint.config.js      # Configuration for code linting
-├── index.html            # Main HTML entry point
-├── package.json          # Project metadata, scripts, and dependencies
-├── postcss.config.js     # PostCSS configuration (used with Tailwind)
-├── tailwind.config.js    # Tailwind CSS configuration and theme extensions
-├── tsconfig.*.json       # TypeScript configurations (app, node base)
+```
+├── public/               # Static assets (logos, favicons)
+├── src/                  # Application source code and components
+├── .gitignore
+├── eslint.config.js      # ESLint configuration
+├── index.html            # HTML entry point
+├── package.json          # Dependencies and scripts
+├── postcss.config.js     # PostCSS configuration
+├── tailwind.config.js    # Tailwind CSS configuration
+├── tsconfig.json         # Base TypeScript configuration
+├── tsconfig.app.json     # App TypeScript configuration
+├── tsconfig.node.json    # Node TypeScript configuration
 └── vite.config.ts        # Vite bundler configuration
+```
+
+---
 
 ## About Me
-I am passionate about software engineering and building efficient, scalable systems. My academic coursework includes Data Structures & Algorithms, Operating Systems, Computer Networks, and Machine Learning[cite: 10].
+
+I am Rohan, a Bachelor of Technology student in Computer Science and Engineering at PES University, Bengaluru. I am interested in software engineering and building efficient, scalable systems. My coursework covers Data Structures and Algorithms, Operating Systems, Computer Networks, and Machine Learning.
 
 ### Experience
-* **Vice Chair & Secretary | [cite_start]IEEE PESU Student Branch** [cite: 12, 13]
-  * Led the technical direction of the student branch, designing an advanced curriculum for workshops[cite: 15].
-  * [cite_start]Designed and implemented custom cybersecurity challenges for a yearly CTF hackathon with over 200 participants[cite: 16].
-* **UI/UX Web Developer Intern | [cite_start]InstiBuzz** [cite: 18, 19]
-  * Engineered responsive UI components using Figma and HTML/CSS, significantly improving mobile accessibility[cite: 21].
-  * [cite_start]Optimized backend Python scripts to enhance data processing efficiency[cite: 22].
 
-### Featured Projects
-* [cite_start]**Intelligent Traffic Control & Green Corridor System:** Developing a vehicle detection system using YOLO and OpenCV to identify emergency vehicles and dynamically adjust signal timers[cite: 25, 27, 28].
-* **Real-Time Streaming Platform:** Architected a live streaming application using the MERN stack and WebSockets to achieve sub-100ms latency[cite: 30, 32].
-* [cite_start]**Sign Language Vocalizer:** Developed a prototype bi-directional communication device using C++, Python, and Arduino to convert finger gestures into speech[cite: 35, 37].
+**Vice Chair and Secretary, IEEE PESU Student Branch**
+- Led the technical direction of the student branch and designed an advanced curriculum for workshops.
+- Created custom cybersecurity challenges for a yearly CTF hackathon with over 200 participants.
+
+**UI/UX Web Developer Intern, InstiBuzz**
+- Built responsive UI components using Figma and HTML/CSS, improving mobile accessibility.
+- Optimized backend Python scripts to improve data processing efficiency.
+
+### Projects
+
+**Intelligent Traffic Control and Green Corridor System**
+Vehicle detection system using YOLO and OpenCV to identify emergency vehicles and dynamically adjust signal timers in real time.
+
+**Real-Time Streaming Platform**
+Live streaming application built on the MERN stack with WebSockets, achieving sub-100ms latency.
+
+**Sign Language Vocalizer**
+Bi-directional communication prototype using C++, Python, and Arduino to convert finger gestures into speech.
 
 ### Technical Skills
-* [cite_start]**Languages:** Python, C, C++, JavaScript (ES6+), SQL [cite: 41]
-* **Web Technologies:** React.js, Node.js, Express.js, MongoDB, HTML5, CSS3, REST API's [cite: 42]
-* [cite_start]**Tools & Platforms:** Git, GitHub, Docker, Figma, Arduino IDE, MATLAB, Postman [cite: 43]
+
+- **Languages:** Python, C, C++, JavaScript (ES6+), SQL
+- **Web Technologies:** React.js, Node.js, Express.js, MongoDB, HTML5, CSS3, REST APIs
+- **Tools and Platforms:** Git, GitHub, Docker, Figma, Arduino IDE, MATLAB, Postman
+
+---
 
 ## Contact
-* [cite_start]**Location:** Bengaluru, India [cite: 2]
-* **Email:** rohanjjogi@gmail.com [cite: 3]
+
+- **Location:** Bengaluru, India
+- **Email:** rohanjjogi@gmail.com
+- **GitHub:** [Rohan-134v](https://github.com/Rohan-134v)
