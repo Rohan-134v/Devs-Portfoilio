@@ -21,27 +21,6 @@ Live site: [devs-portfoilio.vercel.app](https://devs-portfoilio.vercel.app)
 
 ---
 
-## Getting Started
-
-Clone the repository and install dependencies:
-
-```bash
-git clone https://github.com/Rohan-134v/Devs-Portfoilio.git
-cd Devs-Portfoilio
-npm install
-```
-
-Available scripts:
-
-```bash
-npm run dev       # Start local development server
-npm run build     # Type-check and build for production
-npm run preview   # Preview the production build
-npm run lint      # Run ESLint
-```
-
----
-
 ## Repository Structure
 
 ```
