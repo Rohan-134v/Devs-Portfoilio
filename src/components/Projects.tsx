@@ -13,7 +13,7 @@ const projects = [
     stats: ["98% Accuracy", "20ms Latency", "Arduino C++"], 
     github: "https://github.com/Rohan-134v/SignLanguage-Vocaliser",
     live: null,
-    image: "https://drive.google.com/uc?export=view&id=1c88QxVW-_50bSkNla23Ho6W8stLlTRlN",
+    image: "https://freeimage.host/i/BgfHxTJ"
     color: "text-blue-400 border-blue-500/50"
   },
   {
