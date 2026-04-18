@@ -11,9 +11,9 @@ const projects = [
     status: "Completed",
     description: "A wearable device translating sign language to speech using flex sensors.",
     stats: ["98% Accuracy", "20ms Latency", "Arduino C++"], 
-    github: "#",
+    github: "https://github.com/Rohan-134v/SignLanguage-Vocaliser",
     live: null,
-    image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?q=80&w=1600&auto=format&fit=crop",
+    image: "https://drive.google.com/uc?export=view&id=1c88QxVW-_50bSkNla23Ho6W8stLlTRlN",
     color: "text-blue-400 border-blue-500/50"
   },
   {
