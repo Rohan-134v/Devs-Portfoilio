@@ -9,28 +9,35 @@ const skillCategories = [
     title: "Languages & Logic",
     icon: <Terminal size={24} />,
     description: "Core syntax & query languages.",
-    skills: ["Python", "C", "C++", "JavaScript", "SQL", "ARM-TDMI7", "NoSQL", "Python", "C", "C++"] // Duplicated for smooth loop
+    skills: ["Python", "C", "C++", "JavaScript", "SQL", "Java", "Python", "C", "C++", "JavaScript", "SQL", "Java"]
+  },
+  {
+    id: "aiml",
+    title: "AI / ML",
+    icon: <Cpu size={24} />,
+    description: "Machine learning, LLMs & data pipelines.",
+    skills: ["PyTorch", "HuggingFace", "CodeBERT", "LLaMA 3.1", "LoRA/PEFT", "FAISS", "RAG", "NumPy", "Pandas", "Scikit-learn", "Gemini Embeddings", "NLP Pipelines", "Prompt Engineering", "LLM Fine-Tuning", "PyTorch", "HuggingFace", "CodeBERT", "LLaMA 3.1"]
   },
   {
     id: "fullstack",
     title: "Full Stack Ecosystem",
     icon: <Globe size={24} />,
     description: "Scalable frontend & backend architecture.",
-    skills: ["React.js", "Node.js", "Express", "MongoDB", "REST APIs", "Tailwind", "Vite", "HTML5", "CSS3"]
+    skills: ["React.js", "Node.js", "Express", "Spring Boot", "MongoDB", "Firebase", "REST APIs", "WebSockets", "Tailwind", "Vite", "HTML5", "CSS3", "React.js", "Node.js", "Express", "Spring Boot"]
   },
   {
     id: "tools",
-    title: "DevOps & Tools",
+    title: "Dev Tools & Utilities",
     icon: <Wrench size={24} />,
     description: "Prototyping, deployment & version control.",
-    skills: ["Git", "GitHub", "Docker", "Figma", "Postman", "Arduino IDE", "MATLAB", "Spline", "Linux"]
+    skills: ["Git", "GitHub", "Docker", "Figma", "Postman", "Arduino IDE", "MATLAB", "Spline", "Linux", "JIRA", "Git", "GitHub", "Docker", "Figma", "Postman"]
   },
   {
     id: "engineering",
     title: "CS Foundations",
     icon: <Cpu size={24} />,
     description: "Deep system architecture & algorithms.",
-    skills: ["Data Structures", "Algorithms", "OS", "Networks", "Big Data", "Machine Learning", "OOP", "Analytics"]
+    skills: ["Data Structures", "Algorithms", "OS", "Networks", "Machine Learning", "OOP", "Big Data", "Analytics", "SDLC", "Agile/Scrum", "Data Structures", "Algorithms", "OS", "Networks"]
   }
 ];
 

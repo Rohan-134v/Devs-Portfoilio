@@ -11,3 +11,18 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* Hide scrollbar on webkit but keep functionality */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #22c55e33;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #22c55e66;
+}

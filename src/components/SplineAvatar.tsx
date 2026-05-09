@@ -1,7 +1,6 @@
-import { useState, Suspense, lazy } from 'react';
+import { useState, useEffect, useRef, Suspense, lazy } from 'react';
 import { Loader2 } from 'lucide-react';
 
-// Lazy load the heavy Spline library itself
 const Spline = lazy(() => import('@splinetool/react-spline'));
 
 interface SplineAvatarProps {
@@ -9,13 +8,26 @@ interface SplineAvatarProps {
   className?: string;
 }
 
-export default function SplineAvatar({ sceneUrl, className = "" }: SplineAvatarProps) {
+export default function SplineAvatar({ sceneUrl, className = '' }: SplineAvatarProps) {
   const [isLoading, setIsLoading] = useState(true);
+  const [shouldLoad, setShouldLoad] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  // Only start loading Spline when the container is near the viewport
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setShouldLoad(true); observer.disconnect(); } },
+      { rootMargin: '200px' }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <div className={`relative w-full h-full ${className}`}>
-      
-      {/* 1. Loading Spinner (Visible while downloading) */}
+    <div ref={containerRef} className={`relative w-full h-full ${className}`}>
       {isLoading && (
         <div className="absolute inset-0 flex items-center justify-center bg-neutral-900/10 backdrop-blur-sm z-20">
           <div className="flex flex-col items-center gap-2 text-green-500/80">
@@ -25,20 +37,17 @@ export default function SplineAvatar({ sceneUrl, className = "" }: SplineAvatarP
         </div>
       )}
 
-      {/* 2. The 3D Scene Wrapper */}
-      {/* - pointer-events-none: Disables touch on mobile (fixes scrolling glitch) 
-         - lg:pointer-events-auto: Re-enables touch on Desktop (allows interaction)
-      */}
-      <div className="w-full h-full pointer-events-none lg:pointer-events-auto relative z-10">
-        <Suspense fallback={null}>
-          <Spline 
-            scene={sceneUrl}
-            onLoad={() => setIsLoading(false)}
-            className="w-full h-full"
-          />
-        </Suspense>
-      </div>
-
+      {shouldLoad && (
+        <div className="w-full h-full pointer-events-none lg:pointer-events-auto relative z-10">
+          <Suspense fallback={null}>
+            <Spline
+              scene={sceneUrl}
+              onLoad={() => setIsLoading(false)}
+              className="w-full h-full"
+            />
+          </Suspense>
+        </div>
+      )}
     </div>
   );
 }

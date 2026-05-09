@@ -1,13 +1,16 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
-import { BrowserRouter } from 'react-router-dom' // <--- Import this
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import { inject } from '@vercel/analytics';
+import App from './App.tsx';
+import './index.css';
+
+inject();
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter> {/* <--- Wrap App with this */}
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </React.StrictMode>,
-)
+);

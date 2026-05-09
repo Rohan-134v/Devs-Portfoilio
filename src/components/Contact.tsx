@@ -37,7 +37,7 @@ export default function Contact() {
           </div>
 
           <div className="w-full max-w-md text-center lg:text-left">
-             <h3 className="text-2xl font-bold text-white mb-2">Rohan Jogi</h3>
+             <h3 className="text-2xl font-bold text-white mb-2">Rohan</h3>
              <p className="text-gray-400">Engineering the future, one bit at a time.</p>
           </div>
         </motion.div>

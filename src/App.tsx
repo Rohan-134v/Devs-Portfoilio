@@ -1,49 +1,69 @@
-import { Routes, Route } from 'react-router-dom'; // <--- Import Router components
+import { lazy, Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
-import Navbar from "./components/Navbar"; 
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
-import Contact from "./components/Contact";
+import Navbar from './components/Navbar';
+import Hero   from './components/Hero';
 
-function App() {
+// Heavy sections — loaded after first paint
+const About         = lazy(() => import('./components/About'));
+const Experience    = lazy(() => import('./components/Experience'));
+const Skills        = lazy(() => import('./components/Skills'));
+const Projects      = lazy(() => import('./components/Projects'));
+const Contact       = lazy(() => import('./components/Contact'));
+const ProjectDetail = lazy(() => import('./pages/ProjectDetail'));
+
+const PROJECT_ID_MAP: Record<number, string> = {
+  1: 'policy-aware-code-auditor',
+  2: 'airline-reservation-system',
+  3: 'smart-glove-healthcare',
+  4: 'perishables-management-system',
+  5: 'real-time-streaming-platform',
+};
+export { PROJECT_ID_MAP };
+
+// Minimal fallback — invisible, no layout shift
+function PageFallback() {
+  return <div className="min-h-screen bg-black" />;
+}
+
+export default function App() {
   return (
-    <main className="bg-black/100 min-h-screen w-full text-white selection:bg-purple-500 selection:text-white">
-      
-      {/* 1. Navbar is placed here so it appears on ALL pages */}
-      <Navbar /> 
-
+    <main className="bg-black min-h-screen w-full text-white selection:bg-green-500/40 selection:text-white">
+      <Navbar />
       <Routes>
-        {/* 2. The Main "Home" Page (Your Scrolling Portfolio) */}
-        <Route path="/" element={
-          <>
-            <Hero />
-            <About />
-            {/* Navbar was here in your snippet, but for Router/Dock setups, 
-                it's usually better at the top level (line 17) or fixed via CSS */}
-            <Experience />
-            <Skills />
-            <Projects />
-            <Contact />
-            <div className="h-[20vh]"></div> {/* Footer spacer */}
-          </>
-        } />
-
-        {/* 3. (Optional) Example of how to add a future page */}
-        {/* <Route path="/project-details/:id" element={<ProjectDetails />} /> */}
-        
-        {/* 4. (Optional) 404 Not Found Route */}
-        <Route path="*" element={
-          <div className="flex items-center justify-center h-screen text-2xl font-mono">
-            404 | Page Not Found
-          </div>
-        } />
-
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
+              <Suspense fallback={<PageFallback />}>
+                <About />
+                <Experience />
+                <Skills />
+                <Projects />
+                <Contact />
+                <div className="h-[20vh]" />
+              </Suspense>
+            </>
+          }
+        />
+        <Route
+          path="/project/:id"
+          element={
+            <Suspense fallback={<PageFallback />}>
+              <ProjectDetail />
+            </Suspense>
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <div className="flex items-center justify-center h-screen text-2xl font-mono text-gray-400">
+              404 | Page Not Found
+            </div>
+          }
+        />
       </Routes>
     </main>
   );
 }
-
-export default App;
