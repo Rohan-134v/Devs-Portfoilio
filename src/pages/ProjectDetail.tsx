@@ -298,7 +298,7 @@ export default function ProjectDetail() {
         </div>
       </div>
 
-      <div className="max-w-5xl mx-auto px-6 py-16">
+      <div className="max-w-5xl mx-auto px-4 md:px-6 py-10 md:py-16 pb-32">
 
         {/* Header */}
         <motion.div
@@ -316,7 +316,7 @@ export default function ProjectDetail() {
             </span>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
+          <h1 className="text-3xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
             {project.title}
           </h1>
 
@@ -324,7 +324,7 @@ export default function ProjectDetail() {
             {project.summary}
           </p>
 
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-3">
             <a
               href={project.github}
               target="_blank"

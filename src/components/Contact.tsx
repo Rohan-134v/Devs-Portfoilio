@@ -75,10 +75,10 @@ export default function Contact() {
          <p className="text-xs font-mono text-gray-500 uppercase tracking-widest">Establish Link via Frequency</p>
          
          <div className="flex items-center gap-6">
-            <SocialIcon href="https://github.com/rohanjogi" icon={<Github size={20} />} label="GitHub" />
+            <SocialIcon href="https://github.com/Rohan-134v" icon={<Github size={20} />} label="GitHub" />
             <SocialIcon href="mailto:rohanjjogi@gmail.com" icon={<Mail size={20} />} label="Email" />
-            <SocialIcon href="https://linkedin.com/in/rohan-jogi" icon={<Linkedin size={20} />} label="LinkedIn" />
-            <SocialIcon href="https://instagram.com/yourhandle" icon={<Instagram size={20} />} label="Instagram" />
+            <SocialIcon href="https://www.linkedin.com/in/rohan-a09b11298/" icon={<Linkedin size={20} />} label="LinkedIn" />
+            <SocialIcon href="https://www.instagram.com/rohan134v" icon={<Instagram size={20} />} label="Instagram" />
          </div>
          
          <p className="text-xs text-gray-600 mt-4">© 2027 Rohan. System Status: Nominal.</p>
