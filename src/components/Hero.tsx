@@ -40,7 +40,7 @@ export default function Hero() {
               className="pt-2"
             >
               <a
-                href="https://drive.google.com/file/d/13jiAZZejXNwHSKwI8KPZLotmhb2kllxz/view?usp=sharing"
+                href="https://drive.google.com/file/d/1w0aAyaNeSe3Og1R2VIW04WvwEssPCpVB/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group w-fit px-8 py-3.5 rounded-full font-medium border border-white/20 bg-black/40 backdrop-blur-md hover:bg-green-500/20 hover:border-green-500 hover:text-green-400 transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-green-500/25"
