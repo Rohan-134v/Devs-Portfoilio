@@ -412,24 +412,6 @@ export default function ProjectDetail() {
           ))}
         </div>
 
-        {/* Bottom nav */}
-        <div className="mt-24 pt-8 border-t border-white/5 flex items-center justify-between">
-          <button
-            onClick={() => navigate(-1)}
-            className="flex items-center gap-2 text-sm font-mono text-gray-500 hover:text-green-400 transition-colors"
-          >
-            <ArrowLeft size={14} /> Back to Portfolio
-          </button>
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm font-mono text-gray-500 hover:text-green-400 transition-colors"
-          >
-            <Github size={14} /> View on GitHub
-          </a>
-        </div>
-
       </div>
     </div>
   );
