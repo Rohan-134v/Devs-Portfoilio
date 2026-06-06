@@ -411,7 +411,13 @@ export default function ProjectDetail() {
             </motion.div>
           ))}
         </div>
-
+        {/* Bottom nav */}
+          <div className="fixed bottom-0 left-0 right-0 z-40 bg-black/80 backdrop-blur-md border-t border-white/5">
+            <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+              <button onClick={() => navigate(-1)} ...> ← Back to Projects </button>
+                    <a href={project.github} ...> <Github /> View Code </a>
+            </div>
+          </div>
       </div>
     </div>
   );
