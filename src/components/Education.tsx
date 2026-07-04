@@ -3,11 +3,18 @@ import { Award, Trophy, ExternalLink } from "lucide-react";
 
 const certifications = [
   {
+    name: "Fundamentals of Machine Learning and Artificial Intelligence",
+    issuer: "Amazon Web Services (AWS)",
+    date: "2025",
+    credentialUrl: "https://drive.google.com/file/d/1Pj0PzrKOJOtMh3XUmQZFeKlukWNkPQvG/view?usp=sharing",
+    tags: ["Machine Learning", "AI", "AWS", "RAG", "LLM", "Fine Tuning"],
+  },
+  {
     name: "Problem Solving (Basic)",
     issuer: "HackerRank",
     date: "",
     credentialUrl: "https://www.hackerrank.com/certificates/iframe/edcc6bc5acf5",
-    tags: ["Problem Solving", "Algorithms"],
+    tags: ["Python", "Problem Solving", "Data Structures & Algorithms"],
   },
   {
     name: "UI/UX and Figma",
