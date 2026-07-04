@@ -1,5 +1,5 @@
-import { lazy, Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { lazy, Suspense, useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import Hero   from './components/Hero';
@@ -28,6 +28,26 @@ function PageFallback() {
   return <div className="min-h-screen bg-paper" />;
 }
 
+function ScrollHandler() {
+  const location = useLocation();
+  useEffect(() => {
+    const target = (location.state as any)?.scrollTo;
+    if (!target) return;
+    // Poll until the element is mounted (lazy sections may not be ready yet)
+    let attempts = 0;
+    const id = setInterval(() => {
+      const el = document.getElementById(target);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        clearInterval(id);
+      }
+      if (++attempts > 20) clearInterval(id);
+    }, 100);
+    return () => clearInterval(id);
+  }, [location.state]);
+  return null;
+}
+
 export default function App() {
   return (
     <main className="bg-paper min-h-screen w-full text-ink font-sans selection:bg-mint-dark/20">
@@ -37,6 +57,7 @@ export default function App() {
           path="/"
           element={
             <>
+              <ScrollHandler />
               <Hero />
               <Marquee />
               <Suspense fallback={<PageFallback />}>

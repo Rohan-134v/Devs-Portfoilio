@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, Github, ExternalLink, CheckCircle2 } from "lucide-react";
@@ -76,6 +77,14 @@ const projects: Record<string, any> = {
     summary: "A full-stack airline reservation SPA built for the Object Oriented Analysis and Design course, featuring flight search, interactive seat selection, real-time flight tracking, payment processing, and an AI-powered trip suggestion engine — all following strict GRASP and SOLID principles.",
     sections: [
       {
+        title: "Problem Statement",
+        content: "Booking a flight involves multiple fragmented steps — searching routes, selecting seats, managing passengers, processing payments, and tracking flights — typically spread across different systems with no unified experience. Existing platforms lack real-time seat availability, integrated loyalty programmes, and AI-assisted trip planning in a single cohesive application."
+      },
+      {
+        title: "Solution Overview",
+        content: "A full-stack SPA built with React and Spring Boot that unifies the entire booking lifecycle — from flight search and interactive seat selection through payment processing and live flight tracking — with an AI trip suggestion engine powered by Google Gemini, all following strict GRASP and SOLID design principles."
+      },
+      {
         title: "System Architecture",
         content: "The browser communicates exclusively with a Spring Boot backend via a Vite development proxy, eliminating CORS issues. The backend handles all external API calls server-side — Aviationstack for live flight tracking, Google Gemini for AI trip suggestions, and Razorpay for payments. API keys are never exposed to the browser. Firebase Firestore serves as the single source of truth for all application data."
       },
@@ -127,6 +136,25 @@ const projects: Record<string, any> = {
     stack: ["C++", "Arduino", "I2C", "MPU6050", "HC-05 Bluetooth", "Flex Sensors"],
     summary: "A wearable assistive-technology device that improves healthcare accessibility for the hearing-impaired by capturing hand gestures via flex sensors and an MPU6050 module, mapping them to sign language text, and transmitting wirelessly via Bluetooth.",
     sections: [
+      {
+        title: "Problem Statement",
+        content: "Hearing-impaired individuals face significant communication barriers in healthcare settings where quick, accurate communication is critical. Existing solutions are either too expensive, require trained interpreters, or are impractical in clinical environments. There is a need for a low-cost, wearable device that can translate sign language gestures into readable text in real time."
+      },
+      {
+        title: "Solution Overview",
+        content: "A wearable glove embedded with flex sensors and an MPU6050 IMU that captures hand gestures, maps them to sign language text via a pattern-matching firmware algorithm, and transmits the translated output wirelessly via Bluetooth to any paired device — enabling real-time assistive communication without external infrastructure."
+      },
+      {
+        title: "System Architecture",
+        items: [
+          "Flex sensors on each finger output analog voltage proportional to bend angle",
+          "MPU6050 provides 6-axis orientation data (accelerometer + gyroscope) via I2C",
+          "Arduino UNO reads and normalises all sensor inputs in the main loop",
+          "Pattern-matching algorithm compares normalised values against predefined gesture thresholds",
+          "Matched gesture is converted to a text string and written to the HC-05 serial interface",
+          "HC-05 Bluetooth module transmits the text wirelessly to a paired smartphone or display"
+        ]
+      },
       {
         title: "System Description",
         content: "The microcontroller reads analog values from four flex sensors and digital orientation data from the MPU6050 via I2C communication. Each gesture is defined by a unique combination of finger bend angles and hand orientation, matched against predefined patterns in firmware. The HC-05 Bluetooth module enables wireless transmission of translated text to external devices such as smartphones or hospital displays."
@@ -180,6 +208,14 @@ const projects: Record<string, any> = {
     summary: "A full-stack real-time video streaming platform built on the MERN stack, achieving sub-100ms latency via the WebSocket protocol with secure room-based session routing, JWT authentication, and server-side FFmpeg media processing.",
     sections: [
       {
+        title: "Problem Statement",
+        content: "Existing video streaming solutions either require expensive infrastructure, introduce high latency via HTTP polling, or lack secure room-based isolation for private streams. Building a platform that achieves sub-100ms latency with proper authentication and multi-room support from scratch requires careful protocol selection and server architecture design."
+      },
+      {
+        title: "Solution Overview",
+        content: "A MERN-stack streaming platform using persistent WebSocket connections for full-duplex real-time communication, JWT-based authentication for both HTTP and WebSocket layers, server-side FFmpeg for media processing, and an in-memory room registry that isolates stream data between sessions — achieving sub-100ms latency without third-party streaming services."
+      },
+      {
         title: "Architecture",
         content: "Two independent servers work together. The Express HTTP server handles user registration, login, JWT issuance, and REST endpoints backed by MongoDB via Mongoose. The WebSocket server manages all real-time communication — maintaining an in-memory room registry, receiving stream data from broadcasters, and immediately relaying it to all authorised participants in the same room. The React frontend communicates with both: REST over HTTP for standard flows, WebSocket for all real-time stream data."
       },
@@ -230,6 +266,8 @@ export default function ProjectDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
   const project = id ? projects[id] : null;
+
+  useEffect(() => { window.scrollTo(0, 0); }, [id]);
 
   if (!project) {
     return (

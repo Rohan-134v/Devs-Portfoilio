@@ -46,10 +46,7 @@ export default function Navbar() {
     if (isHome) {
       document.getElementById(target)?.scrollIntoView({ behavior: "smooth", block: "start" });
     } else {
-      navigate("/");
-      setTimeout(() => {
-        document.getElementById(target)?.scrollIntoView({ behavior: "smooth", block: "start" });
-      }, 350);
+      navigate("/", { state: { scrollTo: target } });
     }
   }
 
