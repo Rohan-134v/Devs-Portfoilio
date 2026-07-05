@@ -12,18 +12,6 @@ const experiences = [
     ],
     tags: ["FastAPI", "Redis", "Python", "Research"],
   },
-  {
-    role: "Software Engineer Intern",
-    org: "InstiBuzz — IIT Madras venture · Remote",
-    date: "March 2024 – April 2025",
-    bullets: [
-      "Shipped responsive UI components using Figma and HTML/CSS, improving mobile accessibility by 30% and boosting engagement across client-facing features for 5,000+ active users.",
-      "Reduced task completion time by 20% by redesigning key navigation flows with a minimalist design system.",
-      "Collaborated with a 6-member cross-functional remote team using Git and Agile workflows, consistently delivering features on schedule.",
-    ],
-    tags: ["Figma", "HTML/CSS", "Git", "Agile"],
-  },
-
 ];
 
 const leadership = [
